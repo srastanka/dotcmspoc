@@ -1,0 +1,5 @@
+<tool>
+	<key>system</key>
+	<scope>application</scope>
+	<class>com.equinix.viewtool.SystemProperties</class>
+</tool>

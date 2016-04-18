@@ -1,0 +1,5 @@
+include "dotcms:assets"
+//include "dotcms:dynamic-plugins"
+include "dotcms:dynamic-plugins:ca.architech.dotcms.migrations"
+//include "dotcms:static-plugins"
+include "dotcms:static-plugins:com.equinix.config"

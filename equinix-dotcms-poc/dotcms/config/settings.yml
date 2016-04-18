@@ -1,0 +1,18 @@
+sites:
+  - name: poc.equinix.com
+    theme: bootstrap3
+#  - name: second.dotcms.com
+#    theme: bootstrap2
+env:
+  dev:
+    host: dotcms-dev
+    dotCMSHome: /opt/dotcms
+    webdav:
+      port: 8080
+      user: admin@dotcms.com
+      password: admin
+      protocol: http
+      webdavRootPath: /webdav/autopub/
+    ssh:
+      user: dotcms
+      key: ssh_key

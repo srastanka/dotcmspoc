@@ -1,0 +1,99 @@
+subprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'org.hidetake.ssh'
+    apply plugin: 'distribution'
+
+    sourceCompatibility = '1.8'
+
+    repositories {
+        jcenter()
+        maven {
+            url 'http://repo.dotcms.com/artifactory/libs-release'
+        }
+    }
+
+    sourceSets {
+        main {
+            java {
+                srcDir 'src'
+            }
+        }
+    }
+
+    distributions {
+        plugin {
+            baseName = "$project.name"
+            contents {
+                from '.'
+                include '**'
+
+                exclude 'build'
+                exclude 'build.gradle'
+                exclude 'gradle*'
+                exclude '*.iml'
+                exclude 'README.*'
+            }
+        }
+    }
+
+    task send(dependsOn: ['pluginDistTar']) {
+        doLast {
+            def envConfig = readEnvConfig()
+
+            ssh.run {
+                session(getTargetHostConfig(envConfig)) {
+                    println "Sending ${pluginDistTar.archiveName} to: ${envConfig.dotCMSHome}/plugins"
+
+                    put from: "${pluginDistTar.archivePath}",
+                        into: "${envConfig.dotCMSHome}/plugins/"
+
+                    execute "cd ${envConfig.dotCMSHome}/plugins && tar xvf ${pluginDistTar.archiveName}"
+                    execute "rm ${envConfig.dotCMSHome}/plugins/${pluginDistTar.archiveName}"
+
+                    println "Sending complete"
+                }
+            }
+        }
+    }
+
+    task deploy(dependsOn: ['send']) {
+        doLast {
+            def envConfig = readEnvConfig()
+
+            ssh.run {
+                session(getTargetHostConfig(envConfig)) {
+                    println "Deploying plugin: ${pluginDistTar.archiveName.minus('.tar')}"
+
+                    execute "${envConfig.dotCMSHome}/bin/shutdown.sh || /bin/true"
+                    execute "${envConfig.dotCMSHome}/bin/deploy-plugins.sh"
+                    execute "${envConfig.dotCMSHome}/bin/startup.sh"
+
+                    println "Deploy complete"
+                }
+            }
+        }
+    }
+
+    task undeploy() {
+        doLast {
+            def envConfig = readEnvConfig()
+
+            ssh.run {
+                session(getTargetHostConfig(envConfig)) {
+                    def pluginName = pluginDistTar.archiveName.minus('.tar')
+
+                    println "Removing plugin $pluginName"
+
+                    execute "${envConfig.dotCMSHome}/bin/shutdown.sh || /bin/true"
+                    execute "rm -rf ${envConfig.dotCMSHome}/plugins/${pluginName}"
+                    execute "${envConfig.dotCMSHome}/bin/undeploy-plugins.sh"
+                    execute "${envConfig.dotCMSHome}/bin/deploy-plugins.sh"
+                    execute "${envConfig.dotCMSHome}/bin/startup.sh"
+
+                    println "Plugin removed"
+                }
+            }
+        }
+    }
+}

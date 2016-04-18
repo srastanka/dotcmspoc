@@ -1,0 +1,55 @@
+#set($banner = $dotcontent.find($ContentIdentifier))
+<div id="upa_comp">
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li class="active" data-target="#carousel" data-slide-to="0"></li>
+        </ol>
+        <div class="carousel-inner">
+            <!--Begin getting and setting layoutRatio, layoutOrientation, ImageTextAlignment and cdefParam values-->
+            <!--End getting and setting layoutRatio, layoutOrientation, ImageTextAlignment and cdefParam values-->
+
+
+            <div class='item active upa-340'>
+                <div class="item-background"
+                     style="background-image: url('$banner.bannerImage.uri');"></div>
+
+                <div class="carousel-caption">
+                    <div class="row">
+
+                        <!--layoutRatioArray[IMG_INDX]==7-->
+                        <div class="col-sm-7 hidden-xs" style="float:right;">
+
+                        </div>
+                        <div class="col-sm-5" style="text-align: left;float:left;">
+
+
+                            <!--Loading the Config Asset (Metric-CFG_ASSET)-->
+
+
+                            <!--setting the content value to a fatwire variable -->
+
+
+                            <p class="headline">$banner.header</p>
+
+                            <p class="black">$banner.subheader</p>
+
+                            <a class="btn btn-default" href='$banner.actionUrl'>$banner.actionLabel</a>
+                        </div>
+                    </div>
+                    <!--row -->
+                </div>
+                <!--carousel-caption -->
+
+            </div>
+            <!--item -->
+
+
+        </div>
+        <div class="col-xs-12 col-sm-12">
+            <div>
+                <a class="left carousel-control" data-slide="prev" href="index.html#carousel"></a>
+                <a class="right carousel-control" data-slide="next" href="index.html#carousel"></a>
+            </div>
+        </div>
+    </div>
+</div>

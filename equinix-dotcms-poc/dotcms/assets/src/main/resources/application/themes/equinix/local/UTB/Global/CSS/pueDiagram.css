@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/**
+ * Equinix Maintenance
+ * PUE Diagram
+ *
+ * CSS 3.0
+ *
+ * @category Equinix
+ * @package  Pue
+ * @author   Digital Trike <webmaster@digitaltrike.com>
+ * @author   Kai Hatch <kai@digitaltrike.com>
+ * @version  Feb 12, 2014
+ * @license  Digital Trike MSA
+ * @link     http://www.equinix.com
+ */
+ 
+.pueDiagram
+{
+    width:              53%;
+    height:             140px;
+    background-color:   rgb(51,51,51);
+    color:              rgb(165,165,165);
+    margin:             50px auto; 
+    border-radius:      10px;
+    font-family:        "ProximaNova-Regular";
+    font-size:          16px;
+    behavior:           url("http://www.equinix.com${dotTheme.path}local/UTB/Global/CSS/PUE%20Calculator%20%20%20PUE%20Metrics_files/PIE-1.0.0/PIE.htc");
+    position:           relative;
+}
+
+.media .pueDiagram {
+    margin:		50px auto;
+}
+
+.pueDiagram .firstLine,
+.pueDiagram .middleLine,
+.pueDiagram .lastLine
+{
+    position: absolute;
+}
+
+.pueDiagram .firstLine
+{
+    top:   20%;
+    left:  31%;
+}
+
+.pueDiagram .middleLine
+{
+    float:         left;
+    width:         100%;
+    height:        100%;
+   /* line-height:   112px; */  /* overwrite bootstrap .label default */
+}
+
+.pueDiagram .middleLine .label
+{
+    text-align:    center;
+    float:         left;
+    width:         18%;
+    height:        100%;
+    font-size:     16px;
+    color:         white;
+    line-height:   133px; /* overwrite bootstrap .label default */
+}
+
+.pueDiagram .middleLine .line
+{
+    float:         left;
+    width:         77%;
+    height:        70px;
+    border-bottom: 1px solid rgb(165, 165, 165);
+}
+
+.pueDiagram .lastLine
+{
+    left:      22%;
+    bottom:    20%;
+}

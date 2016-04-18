@@ -1,0 +1,223 @@
+#feed_dcm-wrapper {
+  position: relative;
+  width: 100%;
+}
+#feed_dcm-wrapper > div {
+  width: 100%;
+  vertical-align: middle;
+}
+#feed_dcm-wrapper > div > p {
+  background: #ececec;
+  position: absolute;
+  width: 100%;
+  padding: 11px 10px 5px 10px;
+  font-family: proximanova-bold;
+}
+#feed_dcm-wrapper > div > p > span > a {
+  text-transform: uppercase;
+  color: #656565;
+  border: 1px solid #d4d4d4;
+  padding: 5px 5px 0px 5px;
+  max-height: 34px;
+  min-height: 34px;
+  height: 34px;
+}
+#feed_dcm-wrapper > div > div > iframe {
+  border: 2px solid #ececec !important;
+  min-height: 594px !important;
+  width: 100% !important;
+}
+
+#feed_dcm_comp > #feed_dcm-wrapper > div > div {
+  height: 594px;
+  max-height: 594px;
+  overflow: auto;
+  border: 2px solid #ececec !important;
+  padding: 40px 10px 10px 10px;
+  background: #ececec;
+}
+#feed_dcm_comp > #feed_dcm-wrapper > div > div > div {
+  /*padding: 0px 0px 15px 0px;*/ /*COMMENTED OUT BY FW TEAM - TO FIX PADDING 20 APRIL 2015*/
+}
+
+/*ADDED BY FW TEAM - TO ADD PADDING TO EACH FEED - 20 APRIL 2015*/
+/*START*/
+#feed_dcm_comp > #feed_dcm-wrapper > div > div > div > div {
+  padding: 0px 0px 15px 0px;
+}
+/*END*/
+
+/*NEW STYLES ADDED BY FW TEAM - FOR FEED_DCM - 22 APRIL 2015*/
+/*START*/
+
+.utm_wrapper .feed {
+  position: relative;
+  width: 100%;
+  vertical-align: middle;
+}
+.utm_wrapper .feed > p {
+  background: #ececec;
+  width: 100%;
+  padding: 11px 10px 5px 10px;
+  font-family: proximanova-bold;
+}
+.utm_wrapper .feed > p > span > a {
+  text-transform: uppercase;
+  color: #656565;
+  border: 1px solid #d4d4d4;
+  padding: 5px 5px 0px 5px;
+  max-height: 34px;
+  min-height: 34px;
+  height: 34px;
+}
+
+/*.utm_wrapper .feed > div > div {
+  height: 594px;
+  max-height: 594px;
+  overflow: auto;
+  /*ADDED BY FWTEAM - PROVIDED BY PHIL*/
+  /*START*/
+  background:#fff;
+  border:1px solid #ececec;
+  padding:10px;
+  /*END*/
+}*/
+
+/*START -Added by FWTEAM -  Provided in JIRA-597*/
+.utm_wrapper .feed > div > div {
+overflow:auto; 
+padding:10px 0;
+}
+/*END*/
+
+.utm_wrapper .feed > div > div > div {
+  /*ADDED BY FWTEAM - PROVIDED BY PHIL*/
+  /*START*/
+  padding:15px 0;
+  /*END*/
+}
+
+.eq-tab .utm_wrapper .feed .utm_results > div > div:first-child { padding-top:0; }
+
+/*END*/
+
+
+/*START - Added by FWTEAM Provided in JIRA 597*/
+.multi_conv_wrapper > .flag .utm_wrapper .feed > div > div {
+height:355px; 
+overflow-y:auto; 
+padding:10px;
+}
+/*END*/
+
+.multi_conv_wrapper > .flag .utm_wrapper .feed > div > div > div { border-bottom: 1px dashed #ddd; }
+.multi_conv_wrapper > .flag .utm_wrapper .feed > div > div > div:first-child { padding-top:10px; }
+.multi_conv_wrapper > .flag .utm_wrapper .feed > div > div > div:last-child { border-bottom:0; }
+
+.utm_wrapper > .feed .utm_results h4 {
+margin-bottom:5px; 
+font:16px/1.1 "proxima_novabold", Arial;
+}
+.utm_wrapper > .feed .utm_results p {
+color:#999; 
+font:12px "proxima_novaregular", Arial; 
+text-transform:uppercase;
+}
+
+/****PR-PHASE-2 STYLES STARTS****/
+
+.utm_wrapper .pr_utm .pr_utm_results {
+  position: relative;
+  width: 100%;
+  vertical-align: middle;
+}
+.utm_wrapper .pr_utm .pr_utm_results > p {
+  background: #ececec;
+  width: 100%;
+  padding: 11px 10px 5px 10px;
+  font-family: proximanova-bold;
+}
+.utm_wrapper .pr_utm .pr_utm_results > p > span > a {
+  text-transform: uppercase;
+  color: #656565;
+  border: 1px solid #d4d4d4;
+  padding: 5px 5px 0px 5px;
+  max-height: 34px;
+  min-height: 34px;
+  height: 34px;
+}
+
+/*START -Added by FWTEAM -  Provided in JIRA-597*/
+.utm_wrapper .pr_utm .pr_utm_results > div > div {
+overflow:auto; 
+padding:10px 0;
+}
+/*END*/
+
+.utm_wrapper .pr_utm .pr_utm_results > div > div > div {
+  /*ADDED BY FWTEAM - PROVIDED BY PHIL*/
+  /*START*/
+  padding:15px 0;
+  /*END*/
+}
+
+.utm_wrapper > .pr_utm .pr_utm_results h4 {
+margin-bottom:5px; 
+font:16px/1.1 "proxima_novabold", Arial;
+}
+.utm_wrapper > .pr_utm .pr_utm_results p {
+color:#999; 
+font:12px "proxima_novaregular", Arial; 
+text-transform:uppercase;
+}
+
+/********************
+ * RESULTS PAGINATION ----------------------------------------------------------
+ ********************/
+.utm_wrapper > .pr_utm .pr_utm_pagination {
+  /*padding-left: 15px;*/
+  display: none;
+  padding-right: 0;
+}
+@media (max-width: 767px) {
+  .utm_wrapper > .pr_utm .pr_utm_pagination {
+    padding: 0;
+  }
+}
+.utm_wrapper > .pr_utm .pr_utm_pagination > div {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  font-family: "proxima_novaregular";
+  font-size: 14px;
+  line-height: 22px;
+  color: #333;
+}
+.utm_wrapper > .pr_utm .pr_utm_pagination > div a {
+  margin-left: 5px;
+}
+.utm_wrapper > .pr_utm .pr_utm_pagination > div a.active {
+  color: black;
+}
+.utm_wrapper > .pr_utm .pr_utm_pagination > div a.disabled {
+  color: #aaa;
+}
+.utm_wrapper > .pr_utm .pr_utm_pagination > div a.prev {
+  margin-right: 10px;
+  margin-left: 0;
+}
+.utm_wrapper > .pr_utm .pr_utm_pagination > div a.next {
+  margin-left: 15px;
+}
+.utm_wrapper > .pr_utm .pr_utm_pagination > div > div:first-child {
+  display: inline;
+  float: right;
+}
+@media (max-width: 400px) {
+  .utm_wrapper > .pr_utm .pr_utm_pagination > div > div:first-child {
+    display: block;
+    float: none;
+  }
+}
+
+
+/****PR-PHASE-2 STYLES ENDS****/

@@ -1,0 +1,455 @@
+.upa-340 { height: 340px; }
+.upa-220 { height: 220px; }
+.upa-170 { height: 170px; }
+.upa-130 { height: 130px; }
+
+.carousel.slide { margin-bottom: 0px; }
+	.slider-ccm.carousel.slide { margin-bottom: 25px; }
+.carousel.slide .carousel-inner .item img {
+  min-width: 100%;
+}
+	#ccm_mutm-carousel.carousel.slide .carousel-inner .item img { min-width:auto; }
+	
+.carousel.slide div.actualImage { max-height: 260px; }
+.carousel.slide .carousel-caption {
+  top: 50px; left: 5%; right: 5%;
+  margin: 0px; padding: 0px;
+}
+	#ccm_mutm-carousel.carousel.slide .carousel-caption { 
+		padding-top:20px; padding-bottom:30px; 
+		left:20%; right:20%; bottom:20px; 
+	}
+	.slider-ccm.carousel.slide .carousel-caption {
+		position:relative;
+		top:0; right:0; left:0;
+	}
+.carousel.slide .carousel-caption .banner,
+.carousel.slide .carousel-caption .headline {
+  text-align: left;
+  text-shadow: none;
+  padding: 0;
+}
+.carousel.slide .carousel-caption .captions-wrapper img {
+  max-height: 260px;
+}
+@media (max-width: 991px) {
+  .carousel.slide .carousel-caption .captions-wrapper img {
+    max-height: 180px !important;
+  }
+}
+.carousel.slide .carousel-caption p {
+  text-align: left;
+  color: #fff;
+  text-shadow: none;
+  padding: 0;
+}
+	#ccm_mutm-carousel.carousel.slide .carousel-caption * { text-align:center; }
+	.carousel.slide .upa-130 .carousel-caption p + p { margin-top:0; }
+.carousel.slide .carousel-caption p.black {
+  color: black;
+}
+.carousel.slide .carousel-caption .btn.btn-default {
+  margin-top: 11px;
+  height: 44px;
+  /* width: 129px;*/
+  padding: 10px;
+  font-size: 15px;
+}
+.carousel p + p.intro { margin-top:20px; }
+.carousel.slide .carousel-caption .img-holder {
+  position: relative;
+  height: 0;
+  width: 100%;
+  margin-top: -5%;
+}
+.carousel.slide .carousel-caption .videoWrapper {
+  position: relative;
+  /* height:0;
+  width:100%; */
+  /* margin-top:-5%; */
+  /* padding-bottom: 60%; */
+  /* @media (max-width: 991px) {
+      padding-bottom: 55%;
+  } */
+}
+.carousel.slide .carousel-caption .videoWrapper .videoMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 260px;
+  z-index: 999999;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+}
+.lt-ie9 .carousel.slide .carousel-caption .videoWrapper .videoMask {
+  background-color: black;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+@media (max-width: 979px) {
+  .carousel.slide .carousel-caption .videoWrapper .videoMask {
+    height: 180px;
+  }
+}
+.carousel.slide .carousel-caption .videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*height: 100%; */
+  max-height: 260px !important;
+  z-index: 999;
+}
+@media (max-width: 979px) {
+  .carousel.slide .carousel-caption .videoWrapper iframe {
+    max-height: 180px !important;
+  }
+}
+.carousel.slide .carousel-caption .row {
+  margin-top: 0;
+}
+.carousel.slide .carousel-caption .row .col-sm-6 {
+  text-align: left !important;
+}
+@media (max-width: 767px) {
+  .carousel.slide .carousel-caption .row .col-sm-6 {
+    text-align: center !important;
+  }
+}
+.carousel.slide .carousel-caption .row .col-sm-6 p {
+  text-align: left !important;
+}
+@media (max-width: 767px) {
+  .carousel.slide .carousel-caption .row .col-sm-6 p {
+    text-align: center !important;
+  }
+}
+.carousel.slide .carousel-caption .row .col-sm-6.verticalCenter:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  /* Adjusts for spacing */
+}
+.carousel.slide .col-xs-12.col-sm-12 {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 50%;
+  margin: -30px 0 0;
+  z-index: 200;
+  padding-left: 0;
+  padding-right: 0;
+}
+.carousel.slide .col-xs-12.col-sm-12 div {
+  margin: 0 auto;
+  max-width: 1240px;
+  position: relative;
+  max-width: 992px;
+}
+#upa_comp .carousel.slide .carousel-control, .bca-slider .carousel.slide .carousel-control {
+  position: absolute;
+  top: 50%;
+  z-index: 22;
+  background: none;
+  background: url(../../../Global/Images/transparent.png) repeat;
+  width: 72px;
+  height: 60px;
+  display: block;
+  filter: none;
+  opacity: 1.0;
+}
+.slider-ccm.carousel.slide .carousel-control { display: none; }
+#upa_comp .carousel.slide .carousel-control:hover, .bca-slider .carousel.slide .carousel-control:hover {
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#upa_comp .carousel.slide .carousel-control:hover:before, .bca-slider .carousel.slide .carousel-control:hover:before {
+  font-family: FontAwesome;
+  color: red;
+  font-size: 56px;
+  text-shadow: none;
+}
+#upa_comp .carousel.slide .carousel-control.left:hover:before, 
+.bca-slider .carousel.slide .carousel-control.left:hover:before { content: "\f104"; }
+#upa_comp .carousel.slide .carousel-control.right:hover:before, 
+.bca-slider .carousel.slide .carousel-control.right:hover:before { content: "\f105"; }
+
+#upa_comp .carousel.slide .carousel-indicators, 
+.bca-slider .carousel.slide .carousel-indicators {
+  bottom: 12px;
+}
+	.slider-ccm.carousel.slide .carousel-indicators { bottom: -10px; }
+.carousel.slide .carousel-indicators li, body > .container > #upa_comp #carousel.carousel.slide .carousel-indicators li {
+  position: relative; vertical-align: top;
+  background: transparent;
+  width: 11px; height: 11px;
+  margin: 1px 5px;
+  border: 1px solid #ff0000;
+  border-radius: 50%;
+  box-shadow: none;  
+}
+.carousel.slide .carousel-indicators li:hover,
+.carousel.slide .carousel-indicators li.active,
+body > .container > #upa_comp #carousel.carousel.slide .carousel-indicators li:hover,
+body > .container > #upa_comp #carousel.carousel.slide .carousel-indicators li.active {
+  position: relative;
+  background-color: #ff0000;
+}
+#ccm_mutm-carousel.carousel.slide .carousel-indicators li { 
+	width:14px; height:14px;
+	border:3px solid #fff; 
+}
+#ccm_mutm-carousel.carousel.slide .carousel-indicators li:hover,
+#ccm_mutm-carousel.carousel.slide .carousel-indicators li.active {
+	background-color: #fff;
+}
+
+#upa_comp .carousel.slide .carousel-include li.active, .bca-slider .carousel.slide .carousel-include li.active { visibility: hidden; }
+.carousel.slide button.btn.btn-default {
+  height: 20px;
+  padding-top: 5px; padding-bottom: 7px !important; padding-left: 26px;  
+}
+
+.carousel.slide .item .item-background {  
+	position: absolute; 
+	top: 0px; left: 0px; right: 0px; bottom: 0px; 
+	background-position: center center; 
+	background-size: cover;
+}
+
+@media (max-width: 991px) {
+  .carousel.slide {
+    max-width: 100%;
+  }
+  .carousel.slide p {
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .carousel.slide .carousel-caption p {
+    text-align: center;
+  }
+  .carousel.slide .banner,
+  .carousel.slide .headline {
+    text-align: center !important;
+  }
+}
+@media (max-width: 979px) {
+  .carousel.slide .carousel-caption {
+    font-size: 14px;
+  }
+}
+@media (max-width: 699px) {
+  .carousel.slide img {
+    visibility: hidden;
+    height: 300px;
+  }
+  .carousel.slide .item {
+    background-color: #bbb;
+  }
+}
+@media (max-width: 600px) {
+  .carousel.slide button.btn.btn-default {
+    padding-bottom: 7px !important;
+    padding-top: 5px !important;
+    float: none;
+  }
+  .carousel.slide .carousel-caption {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 479px) {
+  .carousel.slide .item,
+  .carousel.slide img {}
+}
+@media (max-width: 400px) {
+  .carousel.slide .item,
+  .carousel.slide img {}
+}
+@media (max-width: 320px) {
+  .carousel.slide .item,
+  .carousel.slide img {}
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .carousel.slide a.left.carousel-control,
+  .carousel.slide a.right.carousel-control {
+    background-color: #fff !important;
+    opacity: 0.5;
+    height: 60px;
+    width: 72px;
+    color: #ff0000;
+    content: '\f104';
+  }
+}
+@media only screen and (max-device-width: 480px) and (min-device-width: 320px) {
+  .carousel.slide a.left.carousel-control,
+  .carousel.slide a.right.carousel-control {
+    background-color: #fff !important;
+    opacity: 0.5;
+    height: 60px;
+    width: 72px;
+    color: #ff0000;
+    content: '\f104';
+  }
+}
+/*CSS for single-slide UPA */
+.upaDisabled .carousel.slide #item,
+.upaDisabled .carousel.slide #item2,
+.upaDisabled .carousel.slide ol,
+.upaDisabled .carousel.slide .controls-area,
+.upaDisabled .carousel.slide button.btn.btn-default {
+  display: none;
+}
+.upaDisabled .carousel.slide {
+  margin-bottom: 0px;
+}
+.upaDisabled .carousel.slide .carousel-caption {
+  left: 10%;
+  right: 10%;
+  padding-bottom: 0 !important;
+}
+.upaDisabled .carousel.slide .carousel-caption .banner,
+.upaDisabled .carousel.slide .carousel-caption .headline {
+  text-align: left;
+  text-shadow: none;
+  padding: 0;
+}
+.upaDisabled .carousel.slide .carousel-caption p {
+  text-align: left;
+  color: #fff;
+  text-shadow: none;
+  padding: 0;
+}
+.upaDisabled .carousel.slide .carousel-caption .btn.btn-default {
+  margin-top: 11px;
+  height: 44px;
+  width: 129px;
+  padding: 10px;
+  font-size: 15px;
+}
+.upaDisabled .carousel.slide button.btn.btn-default {
+  height: 20px;
+  padding-bottom: 7px !important;
+  padding-top: 5px;
+  padding-left: 26px;
+}
+@media (max-width: 991px) {
+  .upaDisabled .carousel.slide {
+    max-width: 100%;
+  }
+  .upaDisabled .carousel.slide p {
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .upaDisabled .carousel.slide .pull-left {
+    float: none !important;
+  }
+  .upaDisabled .carousel.slide .pull-right {
+    float: none !important;
+  }
+  .upaDisabled .carousel.slide .carousel-caption p {
+    text-align: center;
+  }
+  .upaDisabled .carousel.slide .banner,
+  .upaDisabled .carousel.slide .headline {
+    text-align: center !important;
+  }
+}
+@media (max-width: 699px) {
+  .upaDisabled .carousel.slide img {
+    visibility: hidden;
+    height: 300px;
+  }
+  .upaDisabled .carousel.slide .item {
+    background-color: #bbb;
+  }
+  .upaDisabled .carousel.slide .carousel-caption button.btn.btn-default {
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 600px) {
+  .upaDisabled .carousel.slide button.btn.btn-default {
+    padding-bottom: 7px !important;
+    padding-top: 5px !important;
+  }
+  .upaDisabled .carousel.slide .carousel-caption {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 479px) {
+  .upaDisabled .carousel.slide .item,
+  .upaDisabled .carousel.slide img {
+  }
+}
+@media (max-width: 400px) {
+  .upaDisabled .carousel.slide .item,
+  .upaDisabled .carousel.slide img {
+  }
+}
+@media (max-width: 320px) {
+  .upaDisabled .carousel.slide .item,
+  .upaDisabled .carousel.slide img {
+  }
+}
+
+
+/*ADDED BY FWTEAM TO FIX VIDEO ISSUE IN MODAL - 29-04-2015*/
+/*START*/
+
+.carousel.slide .modal .videoWrapper {
+  position: relative;
+  /* height:0;
+  width:100%; */
+  /* margin-top:-5%; */
+  /* padding-bottom: 60%; */
+  /* @media (max-width: 991px) {
+      padding-bottom: 55%;
+  } */
+}
+.carousel.slide .modal .videoWrapper .videoMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+}
+.lt-ie9 .carousel.slide .modal .videoWrapper .videoMask {
+  background-color: black;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+@media (max-width: 979px) {
+  .carousel.slide .modal .videoWrapper .videoMask {
+    height: 180px;
+  }
+}
+
+/*END*/
+
+/* ADDED BY PHIL - 22nd JUN 2015
+/* START */
+
+.carousel .center-block {clear:both; float:none;}
+.carousel .center-block > p {text-align:center !important;}
+.carousel .center-block button {float:none !important;}
+
+/* NEW CSS TO OVERRIDE: .carousel.slide .carousel-caption .row .col-sm-6 (LINE 102) */
+.carousel.slide .carousel-caption .row .col-sm-6.center-block {text-align:center;}
+
+.mobile-video-link { margin-top:10px; text-transform:uppercase; text-shadow:1px 1px 2px rgba(0,0,0,0.8); background-color:rgba(0,0,0,0.6); }
+.mobile-video-link [class^="EQ-"], .mobile-video-link [class*=" EQ-"] {vertical-align:text-bottom; font-size:24px;}
+
+/* General styling for mobile UPA */
+@media (max-width: 767px){
+	.carousel {margin-bottom:60px;}
+	.carousel.slide .carousel-caption .row div {float:none !important; text-align:center !important;}
+	.carousel.slide .carousel-caption p:first-child {margin-bottom:60px !important;}
+	.carousel.slide .carousel-caption p + p {display:none;}
+	.carousel.slide .carousel-caption a {display:inline-block;}
+	.carousel.slide .carousel-control {display:none !important;}
+	.carousel.slide .carousel-indicators {bottom:-30px;}
+	.carousel.slide .carousel-indicators li:hover, .carousel.slide .carousel-indicators li.active {border:3px solid #000;}
+}

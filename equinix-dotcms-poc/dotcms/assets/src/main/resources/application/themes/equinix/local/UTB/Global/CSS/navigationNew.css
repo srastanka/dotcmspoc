@@ -1,0 +1,1158 @@
+@charset "UTF-8";
+/**
+ * Equinix Maintenence
+ * New Home Page Navigation - Styling
+ *
+ * CSS 3.0
+ *
+ * @category Equinix
+ * @package  New Navigation
+ * @author   Digital Trike <webmaster@digitaltrike.com>
+ * @license  Digital Trike MSA
+ * @link     http://www.equinix.com
+ */
+.mainNavigation {
+  /************************
+   * GLOBAL UL/LI OVERRIDES --------------------------------------------------
+   ************************/
+  /**************************
+   * GLOBAL DIV.ROW OVERRIDES ------------------------------------------------
+   **************************/
+  /* ---------------------------------------------------------------------- */
+}
+.mainNavigation ul {
+  margin-top: 0;
+}
+.mainNavigation ul li {
+  color: #333;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: inherit;
+  margin-top: 0;
+}
+@media (max-width: 991px) {
+  .mainNavigation ul li.panel {
+    font-size: 12px !important;
+  }
+}
+.mainNavigation ul li.panel .navMobile li {
+  font-size: inherit;
+  line-height: inherit;
+  margin-top: 0 !important;
+}
+.mainNavigation ul li:before {
+  display: none !important;
+}
+.mainNavigation div.row {
+  margin-top: 0;
+}
+
+.logo a img:first-child {
+  height: 50px;
+  margin-top: -7px;
+  margin-left: 5px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .logo a img:first-child {
+    margin-top: -11px;
+  }
+}
+@media (max-width: 767px) {
+  .logo a img:first-child {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+/* .mainNavigation
+{
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+} */
+.mainNavigation .container {
+  max-width: 980px;
+}
+
+@media (max-width: 767px) {
+  .mainNavigation {
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+  }
+}
+.mainNavigation button.navbar-toggle {
+  background-color: #2F2F2F !important;
+}
+.mainNavigation button.navbar-toggle .glyphicon {
+  color: white;
+}
+
+.mainNavigation .navbar-default .navbar-toggle:hover {
+  background-color: #CCC !important;
+}
+.mainNavigation .navbar-default .navbar-toggle:hover .glyphicon {
+  color: #888;
+}
+.mainNavigation .navbar-default .navbar-toggle:hover .icon-bar {
+  background-color: #888;
+}
+
+.mainNavigation .navbar-default .navbar-toggle {
+  margin-right: 0;
+  position: absolute;
+  right: 0;
+  top: -51px;
+  border: 1px solid #DDD;
+  height: 43px;
+}
+
+.mainNavigation .navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+.mainNavigation {
+  box-shadow: 2px 2px 6px 0 rgba(112, 112, 115, 0.5);
+  /* -webkit-box-shadow: 2px 2px 6px 0 rgba(112, 112, 115, 0.5); */
+  background: #fff;
+  z-index: 900;
+  /* padding-bottom:     5px; */
+  padding-bottom: 0px;
+  padding-top: 24px;
+  behavior: url(PIE.htc);
+}
+
+.mainNavigation a,
+.mainNavigation a:focus {
+  outline: 0;
+}
+
+.mainNavigation .navbar-default {
+  border: 0 none;
+  padding: 9px 0 0;
+}
+
+.mainNavigation .navbar {
+  background-color: white;
+  margin: 0;
+}
+
+.mainNavigation {
+  font-family: proxima_novaregular,Ã¢â‚¬â€¹Arial,Ã¢â‚¬â€¹Helvetica,Ã¢â‚¬â€¹sans-serif;
+}
+
+.mainNavigation .navbar-default .navbar-nav > li > a {
+  padding: 0;
+  text-transform: capitalize;
+}
+
+.mainNavigation .navbar-default .navbar-nav > li {
+  font-size: 15px;
+  margin: 0;
+  margin-left: 22px;
+  /* padding-bottom: 13px; */
+  padding-bottom: 18px;
+  padding-right: 0;
+  padding-top: 4px;
+  float: left;
+}
+.mainNavigation .navbar-default .navbar-nav > li:first-child {
+  margin-left: 0;
+}
+@media (max-width: 991px) {
+  .mainNavigation .navbar-default .navbar-nav > li {
+    margin-left: 15px;
+  }
+  .mainNavigation .navbar-default .navbar-nav > li:first-child {
+    margin-left: 0;
+  }
+}
+
+.mainNavigation .navbar-default .navbar-nav > li.active {
+  /* padding-bottom: 11px; */
+  padding-bottom: 15px;
+}
+
+.carousel {
+  border-top: 1px solid #eee !important;
+}
+
+#nav ul > li.active {
+  border-bottom: 3px solid red;
+}
+
+#nav {
+  max-height: none;
+  padding: 0;
+}
+
+#nav .panel {
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+#nav .navMobile {
+  margin: 0 !important;
+}
+
+#nav a {
+  outline: none;
+}
+
+.mainNavigation .logoSubline {
+  position: absolute;
+  /* left:           8px; */
+  /* width:          118px; */
+  left: -10px;
+  width: 163px;
+  padding-top: 7px;
+  text-align: center;
+  z-index: 10;
+  /* FROM RYAN */
+  text-transform: uppercase;
+  color: #999;
+  font-family: "proxima_novaregular", Arial, sans-serif;
+  font-size: 10px;
+  /* ALTERNATE */
+  /* font-family:    Arial, sans-serif;
+  font-size:      12px; */
+  /* DT Overrides */
+  /* font-size:  8px; */
+  line-height: 10px;
+  /* IE9 */
+}
+.lt-ie10 .mainNavigation .logoSubline {
+  left: -2px;
+  width: 149px;
+}
+@media (max-width: 991px) {
+  .mainNavigation .logoSubline {
+    left: -8px;
+    width: 151px;
+  }
+}
+@media (max-width: 767px) {
+  .mainNavigation .logoSubline {
+    left: 1px;
+    width: 131px;
+  }
+}
+
+/********************
+ * IE 8/9 workarounds ----------------------------------------------------------
+ ********************/
+.lt-ie10 header nav.primary-nav li.last {
+  padding-right: 0px !important;
+}
+
+/*----------------------------------------------------------------------------*/
+.menuContainer {
+  background-color: #f5f5f5;
+  border-top: 1px solid #dfdede;
+  border-bottom: 3px solid #dfdede;
+  display: none;
+  /* -moz-box-sizing:    content-box; */
+}
+
+.menuContaner a,
+.menuContainer a:focus {
+  outline: 0;
+}
+
+.menuContainer a {
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+}
+
+.menuContainer a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.menuContainer ul {
+  margin: 0;
+  padding: 0;
+}
+
+.menuContainer h6 {
+  font-family: "proxima_novaregular", Arial, Helvetica, sans-serif;
+}
+
+.menuContent {
+  font-family: 'proxima_novaregular', Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 24px;
+  /* width:          941px; */
+  padding-top: 15px;
+  min-width: inherit;
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.menuContent > div {
+  display: none;
+}
+
+.menuContent > div.active {
+  display: block;
+}
+
+.menuContent .overview {
+  width: 100%;
+  min-height: 100px;
+  background-color: white;
+  /* padding:            33px 30px 19px; */
+  padding: 10px;
+  padding-top: 20px;
+  /* position:           relative; */
+  float: left;
+}
+
+.menuContent .overviewText {
+  font-family: inherit;
+  font-size: 15px;
+  /* padding:        36px; */
+  padding: 0;
+  float: left;
+  /* width:          569px; */
+  /*     width:          100%; */
+}
+
+.menuContent .navLocations .overview {
+  /* padding-top:       33px;
+  padding-left:      30px;
+  padding-right:     30px;
+  padding-bottom:    19px; */
+  /* width:             881px;
+  height:            100px; */
+}
+
+.menuContent .navLocations .overviewText {
+  width: auto;
+  padding: 0px;
+}
+
+.menuContent .overviewText > a,
+.menuContent .overviewText > a:after {
+  color: red;
+  font-size: 24px;
+  font-family: "proxima_novabold", Arial, Helvetica, sans-serif;
+}
+
+.menuContent .overviewText > a:after {
+  /*position:  absolute;*/
+  font-size: 16px;
+  content: "\25b6";
+  padding-left: 16px;
+}
+
+.menuContent .overviewText p a {color: #ff0000;}
+
+/********************
+ * IE 8/9 workarounds ----------------------------------------------------------
+ ********************/
+.lt-ie10 .menuContent .overviewText a:after {
+  display: inline !important;
+  padding-top: 0;
+  margin-top: -4px;
+}
+
+/*----------------------------------------------------------------------------*/
+/********************
+ * IE 10 workarounds ----------------------------------------------------------
+ ********************/
+.ie10 .menuContent .overviewText a:after {
+  margin-top: -3px;
+}
+
+/*----------------------------------------------------------------------------*/
+.menuContent .overviewText span.caretNav {
+  font-size: 16px;
+  color: red;
+  margin-left: 16px;
+  display: none;
+}
+
+/********************
+ * IE 8/9 workarounds ----------------------------------------------------------
+ ********************/
+.lt-ie10 .menuContent .overviewText a:after {
+  font-size: inherit;
+}
+
+/*----------------------------------------------------------------------------*/
+.menuContent .overviewText p {
+  margin: 0;
+  margin-top: 3px;
+  margin-left: 1px;
+  font-family: "proxima_novaregular", Arial, Helvetica, sans-serif !important;
+  font-size: 15px !important;
+  line-height: 19.5px;
+}
+
+.menuContent .holder {
+  padding: 15px 25px 13px 0px;
+  float: left;
+  width: 100%;
+  /* width:      916px; */
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menuContent .column {
+  float: left;
+  padding: 0;
+  padding-left: 20px;
+  padding-right: 15px;
+  border-left: solid 1px #E3E2E2;
+  border-right: solid 1px #E3E2E2;
+}
+
+/* @media
+(-webkit-min-device-pixel-ratio: 2),
+(-webkit-min-device-pixel-ratio: 1)
+{
+    .menuContent .column
+    {
+       padding-left: 10px;
+    }
+} */
+/********************
+ * IE 8/9 workarounds ----------------------------------------------------------
+ ********************/
+.lt-ie10 .menuContent .holder {
+  display: box;
+  box-align: stretch;
+}
+
+.lt-ie10 .menuContent .column {
+  box-flex: 1;
+}
+
+.lt-ie10 .menuContent .column.last {
+  margin-left: -1px;
+  border-right-style: none;
+}
+
+/*----------------------------------------------------------------------------*/
+.menuContent .column:first-child {
+  border-left-style: none;
+  padding-left: 16px;
+}
+
+.menuContent .column:last-child {
+  margin-left: -1px;
+  border-right-style: none;
+}
+
+.menuContent .col3 {
+  margin-left: -1px;
+  /*width:       33%; */
+  /* width:          276px; */
+  float: left;
+}
+
+.menuContent .col4,
+.menuContent .col4:first-child {
+  /* width:          198px; */
+  margin-left: -1px;
+}
+
+.menuContent .col4:first-child {
+  margin-right: 0px;
+}
+
+.menuContent .col5,
+.menuContent .col5:first-child {
+  /* width:         151px; */
+  width: 20%;
+  margin-left: -1px;
+}
+
+.menuContent .col5:first-child {
+  margin-right: 0px;
+}
+
+.menuContent .video-area {
+  float: left;
+  width: 300px;
+  display: none;
+}
+
+.menuContent .column .title {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 28px;
+  font-size: 16px;
+  line-height: 16px;
+  color: red;
+}
+
+.menuContent .column .title:after {
+  position: absolute;
+  font-size: 10px;
+  padding-top: 1px;
+  padding-left: 5px;
+  content: "\25b6";
+}
+
+/********************
+ * IE 8-10 workarounds ----------------------------------------------------------
+ ********************/
+.lt-ie10 .menuContent .column .title:after {
+  display: inline !important;
+  padding-top: 0;
+  margin-top: -1px;
+}
+
+.lt-ie9 .menuContent .column .title:after {
+  display: inline !important;
+  padding-top: 0;
+  margin-top: -2px;
+}
+
+.ie10 .menuContent .column .title:after {
+  margin-top: -2px;
+}
+
+/*----------------------------------------------------------------------------*/
+.menuContent .column .title.parent {
+  margin-bottom: 10px;
+}
+
+.menuContent .column .caretNav {
+  margin-left: 9px;
+  font-size: 10px;
+  color: red;
+  display: none;
+}
+
+.menuContent ul {
+  overflow: hidden;
+  margin-bottom: 28px;
+  font-size: 13px;
+}
+
+.menuContent ul li ul {
+  font-size: 12px;
+  /* list-style: */
+}
+
+.menuContent ul li ul li:before {
+  content: "\2022";
+  margin-right: 4px;
+}
+
+.menuContent ul:last-child,
+.menuContent li:last-child {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  border-bottom: 0px;
+}
+
+/********************
+ * IE 8/9 workarounds ----------------------------------------------------------
+ ********************/
+.lt-ie10 .menuContent ul.last,
+.lt-ie10 .menuContent li.last {
+  padding-right: 0px !important;
+}
+
+/*----------------------------------------------------------------------------*/
+.menuContent .navLocations .column {
+  padding-right: 0;
+}
+@media (max-width: 979px) {
+  .menuContent .navLocations .column {
+    padding-left: 5px;
+  }
+}
+
+.menuContent .navLocations .country {
+  float: left;
+  width: 100%;
+}
+
+.menuContent .navLocations .country:first-child {
+  margin-top: 0px;
+}
+
+.menuContent .navLocations .country ul {
+  list-style: disc inside none;
+  overflow: visible;
+  margin-bottom: 0px;
+  font-size: 12px;
+}
+
+.menuContent .navLocations .country li {
+  list-style: none;
+}
+
+.menuContent .navLocations .country li:before {
+  content: "\2022";
+  margin-right: 4px;
+}
+
+.menuContent .navLocations .country h6 {
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.menuContent .navLocations .country .col2,
+.menuContent .navLocations .country .col3,
+.menuContent .navLocations .country .col4 {
+  float: left; margin-bottom: 20px;
+}
+
+.menuContent .navLocations .country .col2 { width: 50%; }
+.menuContent .navLocations .country .col3 { width: 33%; margin-left: 0; }
+.menuContent .navLocations .country .col4 { width: 25%; margin-left: 0; }
+
+.menuContent .navLocations .country:last-child div {
+  margin-bottom: 0px;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color: white;
+  color: #333;
+  outline: none;
+}
+
+#industries,
+#why-equinix,
+#service,
+#locations,
+#customers {
+  position: relative;
+  padding-top: 137px;
+  margin-top: -137px;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+  #industries,
+  #why-equinix {
+    padding: 0;
+    margin: 0;
+  }
+}
+/********************
+ * IE 8/9 workarounds ----------------------------------------------------------
+ ********************/
+.lt-ie10 .menuContent .navLocations .country.last div {
+  padding-right: 0px !important;
+}
+
+/*----------------------------------------------------------------------------*/
+.menuContainer .exitMenu {
+  height: 30px;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.menuContainer .exitMenu a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #b4b0b0;
+  font-family: proxima_novabold, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #b4b0b0;
+  text-transform: uppercase;
+}
+
+.menuContainer .exitMenu a:hover {
+  color: red;
+}
+
+#navAccordion {
+  margin: 0;
+  margin-top: 25px;
+  float: right;
+}
+
+#navAccordion a,
+#navAccordion .panel > a:hover {
+  color: #333 !important;
+}
+
+#navAccordion .navMobile a:hover {
+  color: red !important;
+}
+
+@media (max-width: 767px) {
+  .mainNavigation .navbar-default ul {
+    float: none !important;
+  }
+
+  .mainNavigation .navbar-default .navbar-nav > li {
+    padding-bottom: 9px;
+    padding-top: 9px;
+  }
+
+  .mainNavigation .navbar-default .navbar-toggle.collapsed:hover {
+    background-color: #7f7f7f;
+  }
+
+  .mainNavigation .navbar-default ul ul {
+    list-style-type: disc;
+    padding-left: 40px;
+  }
+
+  .mainNavigation .navbar-nav li {
+    padding: 2px 0 3px 5px;
+  }
+
+  .mainNavigation .navbar-default .navbar-collapse {
+    border: none;
+  }
+
+  .mainNavigation .navbar-default .navbar-toggle {
+    position: absolute;
+    right: 0;
+    top: -51px;
+    margin-right: 0;
+  }
+
+  .mainNavigation .navbar-default .navbar-nav .panel {
+    float: none;
+    border-top: 1px solid #eee !important;
+    overflow: hidden;
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .mainNavigation .navbar-default .navbar-nav > li > a:after {
+    content: "\25BE";
+    font-size: 12px;
+    margin-left: 5px;
+  }
+
+  .mainNavigation .navbar-default .navbar-nav > li > a {
+    padding: 10px 10px 5px;
+  }
+
+  .mainNavigation .navbar-default .navbar-nav > li > a:hover,
+  .mainNavigation .navbar-default .navbar-nav > li.open > a {
+    padding: 10px 10px 5px;
+    background: none;
+  }
+}
+/***********************************
+ * LONG LANGUAGE MAIN NAV TEXT FIXES -------------------------------------------
+ ***********************************/
+@media (min-width: 768px) and (max-width: 991px) {
+  .mainNavigation > .container > .row > .col-sm-10 {
+    padding-left: 0;
+  }
+  .mainNavigation > .container > .row > .col-sm-10 li.panel {
+    margin-left: 15px;
+    font-size: 13px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) and (min-width: 768px) and (max-width: 991px) {
+  .mainNavigation > .container > .row > .col-sm-10 li.panel {
+    font-size: 12px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .mainNavigation > .container > .row > .col-sm-10 li.panel:first-child {
+    margin-left: 0;
+  }
+}
+
+/****************************
+ * Minimal Header and MainNav --------------------------------------------------
+ ****************************/
+.mainNavigation .logo a img:nth-child(2) {
+  display: none;
+}
+.mainNavigation > .container > .row > div:nth-child(3) {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #header.minimal {
+    display: none;
+  }
+
+  .mainNavigation.minimal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+  }
+  .mainNavigation.minimal + .menuContainer {
+    position: fixed;
+    top: 58px;
+    left: 0;
+    right: 0;
+    z-index: 900;
+  }
+  .mainNavigation.minimal + .menuContainer + .container {
+    padding-top: 76px;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(1) {
+    padding-right: 0;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(1) .logo img:first-child {
+    display: none;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(1) .logo img:nth-child(2) {
+    display: block;
+    margin: 0;
+    padding-top: 15px;
+    width: 36px;
+    height: auto;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(1) .logoSubline {
+    display: none;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(2) {
+    padding: 0;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(2) .navbar-default {
+    padding: 0;
+    min-height: 55px;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(2) .navbar-default #navAccordion {
+    float: none;
+    margin-top: 0;
+    padding-top: 22px;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(2) .navbar-default #navAccordion .panel {
+    float: left;
+    padding: 0;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(2) .navbar-default #navAccordion .panel:first-child {
+    margin-left: 0;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(2) .navbar-default #navAccordion .panel.active {
+    padding-bottom: 10px;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) {
+    display: block;
+    padding: 0;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:hover {
+    background-color: #d9d9d9;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:hover .dropdown-toggle {
+    background-color: #d9d9d9;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown .dropdown-toggle {
+    background-color: transparent;
+    float: left;
+    border: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    width: 33%;
+    text-align: center;
+    cursor: pointer;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown .dropdown-toggle .downCaret {
+    position: relative;
+    top: 10px;
+    left: 5px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #ccc;
+    width: 0;
+    height: 0;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown .dropdown-menu,
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown .dropdown-menu.hidden {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:hover > .dropdown-toggle + .dropdown-menu {
+    display: block !important;
+    visibility: visible !important;
+    background-color: #d9d9d9;
+    border: solid #fff;
+    border-width: 0 1px 1px;
+    padding: 11px 5px 3px;
+    position: absolute;
+    left: auto;
+    font-size: 12px;
+    right: -1px;
+    z-index: 2000;
+    top: 44px;
+    width: 203px;
+    border-radius: 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.25) 1px 3px 2px 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 1px 3px 2px 0px;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:hover > .dropdown-toggle + .dropdown-menu .column {
+    float: left;
+    width: 140px;
+    border-left: 1px solid #fff;
+    padding: 0 0 0 10px;
+    margin: 3px 0 0;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:hover > .dropdown-toggle + .dropdown-menu .column:first-child {
+    border: none;
+    padding: 0 22px 0 16px;
+    width: 172px;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:hover > .dropdown-toggle + .dropdown-menu .title {
+    display: block;
+    color: #414040;
+    padding: 0 0 10px;
+    font-family: 'proxima_novasemibold';
+    text-transform: none;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:hover > .dropdown-toggle + .dropdown-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:hover > .dropdown-toggle + .dropdown-menu li {
+    padding: 0 0 9px;
+    margin-top: 0;
+    overflow: hidden;
+    font-family: Arial;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:hover > .dropdown-toggle + .dropdown-menu li a {
+    color: #f00;
+    position: relative;
+    display: block;
+    padding: 0 15px;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: none;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:hover > .dropdown-toggle + .dropdown-menu li a:hover,
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:hover > .dropdown-toggle + .dropdown-menu li a:focus {
+    background: none;
+    color: #f00;
+    text-decoration: underline;
+    margin: 0;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:hover > .dropdown-toggle + .dropdown-menu li.active a {
+    background: none;
+    color: #000;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:hover > .dropdown-toggle + .dropdown-menu li.active a:after {
+    background: url(../Images/sprite.png) no-repeat -274px 0;
+    width: 11px;
+    height: 10px;
+    overflow: hidden;
+    text-indent: -9999px;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:hover > .dropdown-toggle + .dropdown-menu li.active a:hover {
+    background: none;
+    color: #000;
+    text-decoration: underline;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:nth-child(1):hover > .dropdown-toggle + .dropdown-menu {
+    width: 342px;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:nth-child(1):hover > .dropdown-toggle + .dropdown-menu li a {
+    padding: 0;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:nth-child(3):hover > .dropdown-toggle + .dropdown-menu {
+    padding: 7px 0;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:nth-child(3):hover > .dropdown-toggle + .dropdown-menu .navbar-form {
+    margin: 0;
+    background: #fff;
+    width: 180px;
+    border-radius: 3px;
+    padding: 0 8px;
+    behavior: url(PIE.htc);
+    font-family: "ProximaNova-Regular", Arial, Helvetica, sans-serif;
+    float: none !important;
+    margin: 0 auto;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:nth-child(3):hover > .dropdown-toggle + .dropdown-menu .navbar-form .form-control {
+    background: none;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    font-size: 14px;
+    line-height: 17px;
+    height: 30px;
+    padding: 9px 0 3px;
+    padding-left: 1px;
+    float: left;
+    behavior: url(PIE.htc);
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:nth-child(3):hover > .dropdown-toggle + .dropdown-menu .navbar-form .btn {
+    background: url(../Images/sprite.png) no-repeat -238px 0;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    margin: 7px 3px 0;
+    text-indent: -9999px;
+    float: right;
+    behavior: url(PIE.htc);
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:nth-child(3):hover > .dropdown-toggle + .dropdown-menu .navbar-form .btn:active,
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:nth-child(3):hover > .dropdown-toggle + .dropdown-menu .navbar-form .bun.active {
+    box-shadow: none;
+  }
+  .mainNavigation.minimal > .container > .row > div:nth-child(3) .dropdown:nth-child(3):hover > .dropdown-toggle + .dropdown-menu .navbar-form .form-group {
+    overflow: hidden;
+    display: block;
+    margin: 0;
+  }
+}
+/****************
+ * Utility footer --------------------------------------------------------------
+ ****************/
+@media (min-width: 768px) {
+  .homePage-utilityFooter {
+  	position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    height: 50px;
+    z-index: 999;
+    -webkit-transform: translate3d(0px, 50px, 0px);
+    transform: translate3d(0px, 50px, 0px);
+    transition: all 0.2s ease 0s;
+  }
+  /* FED: Slides up the bottom MCF */
+  .homePage-utilityFooter.on { -webkit-transform: translate3d(0px, 0px, 0px); transform: translate3d(0px, 0px, 0px); }
+  .homePage-utilityFooter * {
+    outline: none !important;
+  }
+  .homePage-utilityFooter > .container {
+    max-width: 980px;
+  }
+  .homePage-utilityFooter > .container > .row {
+    margin-top: 0;
+  }
+  .homePage-utilityFooter .col-xs-12 > p {
+    float: left;
+    color: #999;
+    padding-top: 16px;
+  }
+  .homePage-utilityFooter .col-xs-12 .footerFlag {
+    float: left;
+    position: relative;
+    font-family: "proxima_novaregular";
+  }
+  .homePage-utilityFooter .col-xs-12 .footerFlag > a {
+    padding-top: 10px;
+    padding-left: 23px;
+    padding-right: 13px;
+    display: inline-block;
+    height: 75px;
+    color: white;
+    font-size: 16px;
+    text-decoration: none !important;
+    background-color: black;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .homePage-utilityFooter .col-xs-12 .footerFlag > a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .homePage-utilityFooter .col-xs-12 .footerFlag > a:hover {
+    color: red;
+    text-decoration: none;
+  }
+  .homePage-utilityFooter .col-xs-12 .footerFlag > a span:first-child {
+    font-size: 20px;
+    position: relative;
+    top: 3px;
+    width: 20px; 
+    height: 20px;
+  }
+  .homePage-utilityFooter .col-xs-12 .footerFlag > .content {
+    position: absolute;
+    bottom: 75px;
+    display: none;
+    width: 250px;
+    /* height:     300px; */
+    background-color: white;
+    box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    padding: 15px;
+    left: 0;
+    /*Fix for old Gated theme- Persistent Footer Gap Issue - BEGIN*/
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /*END - Fix for old Gated theme- Persistent Footer Gap Issue */
+  }
+  .homePage-utilityFooter .col-xs-12 .footerFlag:last-child {
+    float: right;
+  }
+  .homePage-utilityFooter .col-xs-12 .footerFlag:last-child > a {
+    font-size: 24px;
+  }
+  .homePage-utilityFooter .footerFlag .content > h3 { padding:5px 0; margin:0 0 10px; border-bottom:1px solid #ddd; }
+
+  .homePage-footer {
+    padding-bottom: 50px;
+  }
+
+  .mainNavigation #navAccordion > li.footerFlag {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .mainNavigation #navAccordion > li span[class*="EQ-"] {
+    font-size: 14px;
+    top: 3px;
+    /* margin-right: -8px; */
+  }
+
+  .mainNavigation #navAccordion > li.panel.last + li.footerFlag {
+    border-top: 3px solid #ccc !important;
+  }
+
+  .mainNavigation #navAccordion > li.footerFlag {
+    display: block;
+  }
+
+  .mainNavigation #navAccordion > li.footerFlag > div.footerFlag {
+    padding-left: 27px;
+  }
+
+  .mainNavigation #navAccordion > li.footerFlag > div.footerFlag * {
+    font-size: 14px;
+  }
+
+  .homePage-utilityFooter, .homePage-utilityFooter.fixed {
+    display: none;
+  }
+/* Added by FWTEAM INDIA to fix WCM-665*/
+#multi_conv_v2_comp
+{
+ display: none;
+
+}
+}
+/* Added by FWTEAM INDIA Provided by PHILL */
+@media (min-width: 1200px) {
+            .homePage-utilityFooter > .container {width:100%; max-width:1170px;}
+}
+
+.homePage-utilityFooter .footerFlag:nth-child(3) > a > span:last-child {vertical-align:text-bottom;}
+
+.homePage-utilityFooter .footerFlag > a > span:last-child {font-size:16px;}
+/* Added by FWTEAM INDIA Provided by PHILL */

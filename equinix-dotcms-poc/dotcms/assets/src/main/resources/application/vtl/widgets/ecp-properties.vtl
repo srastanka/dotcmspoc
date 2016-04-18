@@ -1,0 +1,7 @@
+$response.setHeader("Content-Type", "text/plain")
+#foreach($con in $dotcontent.pull("+contentType:Bundle +Bundle.title:ECP*", 0, "modDate desc"))
+#foreach($prop in $con.properties.map.entrySet())
+$prop
+#end
+#end
+$response.setHeader("Content-Type", "text/plain")

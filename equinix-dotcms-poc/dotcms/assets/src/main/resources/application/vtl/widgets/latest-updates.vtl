@@ -1,0 +1,6 @@
+#set($variant = $request.getParameter("variant"))
+#if (!$UtilMethods.isSet($variant) || $variant == "a")
+    #dotParse('/application/vtl/widgets/latest-updates-a.vtl')
+#else
+    #dotParse('/application/vtl/widgets/latest-updates-b.vtl')
+#end

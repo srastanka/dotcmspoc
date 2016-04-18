@@ -1,0 +1,192 @@
+#if (!$UtilMethods.isSet($ContentIdentifier))
+    #set($ContentIdentifier = $identifier)
+#end
+
+<div class="tab_mutm-wrapper container widescreen">
+<div class="tcm-primary">
+##        <ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-0" aria-controls="tab-0" role="tab" data-toggle="tab">Latest Updates</a></li><li role="presentation"><a href="#tab-1" aria-controls="tab-1" role="tab" data-toggle="tab">Data Centers</a></li><li role="presentation"><a href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">Enterprise Solutions</a></li><li role="presentation"><a href="#tab-3" aria-controls="tab-3" role="tab" data-toggle="tab">Cloud Providers</a></li></ul>
+<div class="tab-content">
+
+
+
+<div id="tab-0" class="tab-pane active" role="tabpanel">
+<div id="loaderDiv0" style="display:none;vertical-align:middle;text-align:center;">
+    <div class="tab_loader"><img width="64" height="64" src="/local/img/loading.gif" alt="Loading"></div>
+</div>
+<div class="eq-tab">
+<div class="row">
+<div class="pull-left col-xs-12" style="padding-left: 0px; padding-right: 0px;">
+<div class="col-sm-12 media-body col-xs-12">
+<section data-cols="12">
+
+
+<!--Loading the Config Asset (Metric-CFG_ASSET)-->
+
+
+<!--setting the content value to a fatwire variable -->
+
+
+<div class="multi">
+
+
+<style>.text-right + hr {
+    margin-top: 5px;
+}</style>
+
+
+<!--Loading the Config Asset (Metric-CFG_ASSET)-->
+
+
+<!--setting the content value to a fatwire variable -->
+
+
+<div class="row">
+    <div class="pull-left col-xs-12" style="padding-left: 0px; padding-right: 0px;">
+        <div class="col-sm-12 media-body col-xs-12">
+            <section data-cols="12"><h2 class="text-center"><i class="Icon EQ-Advertising"></i> Announcing Equinix Data
+                Hub™, Your Global Edge. <a href="/services/data-hub/">Explore Solution ›</a></h2>
+
+                <p class="text-center text-muted">Addresses IT demand for real time analytics, internet of things (IoT),
+                    data collection and data protection.</p></section>
+        </div>
+    </div>
+</div>
+
+
+<hr>
+<div class="row">
+    <div class="pull-left col-xs-12" style="padding-left: 0px; padding-right: 0px;">
+        <div class="col-sm-6 media-body col-xs-12">
+            <section data-cols="6"><p class="intro">News &amp; Press Releases </p>
+                <span class="featured-post">
+                    #set($featuredPressRelease = $dotcontent.pullRelated("LatestUpdatesWidget-PressRelease", $ContentIdentifier, false, 1))
+                    #if ($featuredPressRelease.size() > 0 )
+                        #set($featuredPressRelease = $featuredPressRelease[0])
+                        <a href="/newsroom/press-releases/pr/${featuredPressRelease.titleUrlSlug}">
+
+
+                            <div class="captions-wrapper">
+                                <div class="caption bottom white">
+
+                                    <p>${featuredPressRelease.title}<span class="byline">Press Release</span></p>
+
+                                </div>
+                                <img class="img-responsive"
+                                     src="${featuredPressRelease.image.uri}">
+                            </div>
+
+
+                        </a>
+                    #end
+                </span>
+
+                <p class="text-right"><a href="/newsroom/">All News &amp; Press Releases <i class="fa fa-play"></i></a>
+                </p>
+                <hr>
+
+
+                <!--Loading the Config Asset (Metric-CFG_ASSET)-->
+
+
+                <!--setting the content value to a fatwire variable -->
+
+                <div class="utm_wrapper">
+                    <div class="feed">
+
+
+                        <script type="text/javascript">
+                            var pr_random_var = "1868882179";
+                            var pr_posts;
+
+                        </script>
+
+
+                        <div id="utm_loader_1868882179" class="utm_loader" style="display: none;"><img width="64"
+                                                                                                       height="64"
+                                                                                                       alt="Loading"
+                                                                                                       src="/local/img/loading.gif">
+
+                            <p>Loading...</p></div>
+                        <div id="utm_results_1868882179" class="utm_results" style="display: block;">
+
+
+                            <div>
+                                #foreach($con in $dotcontent.pull("+contentType:PressRelease",3,"PressRelease.date desc"))
+                                    <div><h4><a
+                                            href="/newsroom/press-releases/pr/${con.titleUrlSlug}">${con.title}</a></h4>
+                                    <p>$date.format('MMMM d, y', $con.date)</p></div>
+                                #end
+                            </div>
+
+                        </div>
+                        <script type="text/javascript"> $(document).ready(function () {
+                            getUTMFeed("PR", 3);
+                        }); </script>
+
+
+                    </div>
+                </div>
+
+
+            </section>
+        </div>
+
+        <div class="col-sm-6 media-body col-xs-12">
+            <section data-cols="6"><p class="intro">Events</p>
+                <span class="featured-post">
+                    #set($featuredEvent = $dotcontent.pullRelated("LatestUpdatesWidget-calendarEvent", $ContentIdentifier, false, 1))
+                    #if ($featuredEvent.size() > 0)
+                        #set($featuredEvent = $featuredEvent[0])
+                    <a href="${featuredEvent.link}">
+
+
+                        <div class="captions-wrapper">
+                            <div class="caption bottom white">
+                                <p>${featuredEvent.title}<span class="byline">$date.format('MMMM d, y', $featuredEvent.startDate)</span></p>
+
+                            </div>
+                            <img class="img-responsive"
+                                 src="${featuredEvent.image.uri}">
+                        </div>
+
+
+                    </a>
+                    #end
+                </span>
+
+                <p class="text-right"><a href="/newsroom/events/">All Events <i class="fa fa-play"></i></a></p>
+                <hr>
+
+                <span class="feed_results">
+##                    <div><h4><a href="/newsroom/events/">6th Annual Cloud MENA</a></h4><p>April 11-12, 2016</p></div>
+                    #foreach($con in $dotcontent.pull("+contentType:calendarEvent",3,"calendarEvent.startDate asc"))
+                        <div><h4><a
+                                href="/newsroom/events/">${con.title}</a></h4>
+                            <p>$date.format('MMMM d, y', $con.startDate)</p></div>
+                    #end
+                </span>
+
+
+            </section>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+</div>
+
+
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>

@@ -1,0 +1,262 @@
+/***************
+ * DESKTOP STATE ---------------------------------------------------------------
+ ***************/
+.multi_conv_wrapper {
+  position: fixed;
+  top: 300px;
+  left: 0;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  /*Added from MCF1.0 - START*/
+  height: 0;
+  /*Added from MCF1.0 - END*/
+}
+.multi_conv_wrapper * {
+  outline: none !important;
+  /*Added from MCF1.0 - START*/
+  box-sizing: border-box;
+  /*Added from MCF1.0 - END*/
+}
+.multi_conv_wrapper .flag {
+  position: relative;
+  background-color: black;
+  margin-top: 1px;
+  
+  /*Added from MCF1.0 - START*/
+  float: left;
+  /*position: relative;*/
+  clear: both;
+  padding: 15px;
+  /*background-color: rgba(0, 0, 0, 0.8);*/
+  margin-bottom: 7px;
+  max-width: 290px;
+  left: -30px;
+  /*Added from MCF1.0 - END*/
+  
+}
+.multi_conv_wrapper .flag:first-child {
+  margin-top: 0;
+}
+
+/*Added from MCF2.0 - START*/
+.multi_conv_wrapper .flag.hover > a {
+  display: block;
+  padding-top: 9px;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+/*Added from MCF2.0 - END*/
+  
+/*Added from MCF1.0 - START*/
+.multi_conv_wrapper .flag > a {
+  position: absolute;
+  top: 0;
+  right: -36px;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.6); /*Added by FW TEAM Newly*/
+  text-decoration: none;
+  padding: 9px;
+  color: white;
+  /*background-color: rgba(0, 0, 0, 0.8);*/
+  background-color: black; /*Added by FW TEAM Newly*/
+}
+/*Added from MCF1.0 - END*/
+
+@media (max-width: 767px) {
+  .multi_conv_wrapper .flag > a {
+    display: none;
+  }
+}
+/* - COMMENTED OUT BY FW TEAM
+.multi_conv_wrapper .flag > a.active {
+  color: red;
+}
+*/
+/*Added from MCF1.0 - START*/
+.multi_conv_wrapper .flag > a:hover, .multi_conv_wrapper .flag > a.active {
+  color: red;
+}
+/*Added from MCF1.0 - END*/
+.multi_conv_wrapper .flag > a .fa {
+  font-size: 20px;
+}
+
+/*Added from MCF2.0 - START*/
+.multi_conv_wrapper .flag.hover .content { /*added .hover by FW TEAM*/
+   display:            none; 
+/*  visibility: hidden; */
+  position: absolute;
+  background-color: white;
+  width: 300px;
+  /* height:             300px; */
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.6);
+  /* border-radius:      5px; */
+  padding: 15px;
+  max-width: 350px;
+  z-index: 1;
+}
+.multi_conv_wrapper .flag.hover .content #twit_dcm_comp #feed_dcm-wrapper > div > div > iframe { /*added .hover by FW TEAM*/
+  /* visibility: inherit !important; */
+  display: none;
+  min-height: 350px !important;
+  height: 350px !important;
+}
+/*Added from MCF2.0 - END*/
+
+/*Added from MCF1.0 - START*/
+.multi_conv_wrapper .flag.slide > .content { /*added .slide by FW TEAM*/
+  display: none;
+}
+.multi_conv_wrapper .flag.slide > .content.active { /*added .slide by FW TEAM*/
+  display: block;
+}
+.multi_conv_wrapper .flag.slide > .content * { /*added .slide by FW TEAM*/
+  color: #a1a1a4;
+  font-size: 14px;
+}
+.multi_conv_wrapper .flag.slide > .content h3 { /*added .slide by FW TEAM*/
+  margin-top: 0;
+}
+.multi_conv_wrapper .flag.slide > .content a,
+.multi_conv_wrapper .flag.slide > .content a:hover { /*added .slide by FW TEAM*/
+  color: red;
+  text-decoration: underline;
+}
+/*Added from MCF1.0 - END*/
+
+/*Added by FWTEAM - BEGIN*/
+.multi_conv_wrapper .flag.slide.active {
+    margin-bottom: 1px;
+}
+/*Added by FWTEAM - END*/
+
+/* .multi_conv_wrapper
+{
+    position:   fixed;
+    top:        300px;
+    left:       0;
+    z-index:    9999;
+    height:     0;
+    
+    *
+    {
+        outline: none !important;
+    }
+    
+    .flag
+    {
+        float:              left;
+        position:           relative;
+        clear:              both;
+        padding:            15px;
+        background-color:   rgba(0,0,0, 0.8);
+        margin-bottom:      7px;
+        max-width:          290px;
+        left:               -30px;
+        
+        &.active
+        {
+            margin-bottom: 1px;
+        }
+        
+        & > a
+        {
+            position:           absolute;
+            top:                0;
+            right:              -36px;
+            width:              36px;
+            height:             36px;
+            text-decoration:    none;
+            padding:            9px;
+            color:              white;
+            background-color:   rgba(0,0,0, 0.8);
+            
+            @media(max-width: 767px)
+            {
+                display: none;
+            }
+            
+            &:hover,
+            &.active
+            {
+                color: red;
+            }
+        }
+        
+        & > .content
+        {
+            display: none;
+            
+            &.active
+            {
+                display: block;
+            }
+            
+            *
+            {
+                color:      #a1a1a4;
+                font-size:  14px;
+            }
+            
+            h3
+            {
+                margin-top: 0;
+            }
+            
+            a,
+            a:hover
+            {
+                color:              red;
+                text-decoration:    underline;
+            }
+        }
+    }
+} */
+/************************
+ * MOBILE STATE (MainNav) ------------------------------------------------------
+ ************************/
+.mainNavigation #navAccordion > .last + li.multi_conv_flag {
+  border-top: 3px solid #ccc !important;
+}
+@media (min-width: 768px) {
+  .mainNavigation #navAccordion > li.multi_conv_flag {
+    display: none;
+  }
+}
+.mainNavigation #navAccordion > li.multi_conv_flag a {
+  display: inline-block;
+  /* &:after
+  {
+      display: none;
+  } */
+}
+.mainNavigation #navAccordion > li.multi_conv_flag a span {
+  margin-right: 5px;
+}
+.mainNavigation #navAccordion > li.multi_conv_flag > div.multi_conv_flag {
+  padding-left: 27px;
+}
+.mainNavigation #navAccordion > li.multi_conv_flag > div.multi_conv_flag * {
+  font-size: 14px;
+}
+
+/* Added by Phil on 23-Jun-2015 */
+
+
+/* Added by Phil on 23-Jun-2015 */
+.multi_conv_wrapper .flag.hover .content > iframe {visibility:inherit !important;}
+/* End */
+
+
+/*Added By FW TEAm Provided in JIRA 681 to Fix Icomoon icons in MCF- START*/
+.multi_conv_wrapper .flag span[class*="EQ-"] {
+font-size:20px; 
+width:20px; 
+height:20px;
+}
+/*END*/

@@ -1,0 +1,28 @@
+	div.utm_loader {
+	
+		background: none repeat scroll 0 0 #f3f3f3 !important;
+		//border: 1px solid #ccc;
+		color: #f00;
+		font-size: 1.2em;
+		//padding: 390px 0;
+		padding: 80% 0 !important;
+		text-align: center;    
+        	//width: 690px;  
+		width: 100%;
+	}
+
+	div.utm_loader p {
+		background: none repeat scroll 0 0 #f3f3f3 !important;
+	}
+
+	div.utm_results {
+		display: none;
+	}
+
+.feed li.blog_feed {
+	padding: 10px;
+}
+
+.feed li.utm_feed {
+	padding: 10px;
+}

@@ -1,0 +1,36 @@
+<script>
+    dojo.ready(function () {
+
+        var sourceVariableName = "${field.velocityVarName}";
+        var targetVariableName = sourceVariableName.substring(0, sourceVariableName.indexOf("UrlSlug"));
+
+        var slugInputField = document.getElementById("${field.velocityVarName}_value");
+        var hiddenField = document.getElementById("${field.velocityVarName}");
+
+        function generateValue(newValue) {
+            var slugValue = newValue.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]+/g,'').replace(/[-][-]+/g,'-');
+            hiddenField.value = slugValue;
+            slugInputField.value = slugValue;
+        }
+
+        dijit.byId("${field.velocityVarName}_value").watch(function (event) {
+            if (event === "focused") {
+                if (slugInputField.value === "") {
+                    generateValue(document.getElementById(targetVariableName).value);
+                } else {
+                    hiddenField.value = slugInputField.value;
+                }
+            }
+        });
+
+        if (hiddenField.value === "") {
+            generateValue(document.getElementById(targetVariableName).value);
+        } else {
+            slugInputField.value = hiddenField.value;
+        }
+    });
+</script>
+
+<input type="text" name="${field.velocityVarName}_value"
+       data-dojo-type="dijit/form/TextBox" data-dojo-props="trim:true" id="${field.velocityVarName}_value" style="width: 400px;" />
+

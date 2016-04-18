@@ -1,0 +1,344 @@
+<header id="header-v2">
+    <div class="container">
+        <div class="headerWrapper">
+            <div class="hoverMenu"><span class="fa fa-user"></span>
+                <span class="text">Customer Login</span>
+                <span class="downCaret"></span>
+
+                <div class="menuBody login">
+                    <div class="column">
+                        <strong class="title">All Customers</strong>
+                        <ul>
+                            <li><a target="_blank" href="https://portal.equinix.com/">Equinix Customer Portal </a></li>
+                            <li><a href="https://portal.equinix.com.br" target="_blank">Equinix Customer Portal
+                                (Brazil)</a></li>
+                            <li><a target="_blank" href="http://cloudexchangeportal.equinix.com">Equinix Cloud Exchange
+                                Portal</a></li>
+                            <li><a target="_blank" href="https://ix.equinix.com/">Equinix IX Portal</a></li>
+                            <li><a target="_blank" href="https://marketplace.equinix.com">Equinix Marketplace</a></li>
+                            <li><a href="http://partnercentral.equinix.com">Partner Central</a></li>
+                            <li><a href="http://welcome.equinix.com/login/">Customer Guide</a></li>
+                            <li><a target="_blank" href="http://www.customersat3.com/csc/equinix">Equinix Customer
+                                Feedback</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="hoverMenu"><span class="fa fa-globe"></span>
+                <span class="text">United States – English</span>
+                <span class="downCaret"></span>
+
+                <div class="menuBody language">
+                    <ul>
+                        <li class="active">
+                            <a href="http://www.equinix.com">United States – English</a>
+                        </li>
+                        <li>
+                            <a href="http://www.equinix.co.uk">United Kingdom – English</a>
+                        </li>
+                        <li>
+                            <a href="http://www.equinix.com.au">Australia - English</a>
+                        </li>
+                        <li>
+                            <a href="http://www.equinix.ae">UAE - English</a>
+                        </li>
+                        <li>
+                            <a href="http://www.equinix.de">Germany - Deutsch</a>
+                        </li>
+                        <li>
+                            <a href="http://www.equinix.fr">France - Francais</a>
+                        </li>
+                        <li>
+                            <a href="http://www.equinix.ch">Switzerland – English</a>
+                        </li>
+                        <li>
+                            <a href="http://de.equinix.ch">Switzerland - Deutsch</a>
+                        </li>
+                        <li>
+                            <a href="http://fr.equinix.ch">Switzerland - Francais</a>
+                        </li>
+                        <li>
+                            <a href="http://www.equinix.hk">Hong Kong - English</a>
+                        </li>
+                        <li>
+                            <a href="http://www.equinix.sg">Singapore - English</a>
+                        </li>
+                        <li>
+                            <a href="http://www.equinix.nl">Nederlands - English</a>
+                        </li>
+                        <li>
+                            <a href="http://en.equinix.cn">China - English</a>
+                        </li>
+                        <li>
+                            <a href="http://www.equinix.cn">中国 - 中文</a>
+                        </li>
+                        <li>
+                            <a href="http://www.equinix.co.jp">日本 - 日本語</a>
+                        </li>
+                        <li>
+                            <a href="http://www.equinix.com.br">Brasil - Português</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="hoverMenu">
+                <span class="fa fa-search"></span>
+                <span class="downCaret"></span>
+
+                <div class="menuBody search">
+                    <form id="nav_search_form" action="" method="post">
+                        <input id="nav_search_input" name="search" type="text" placeholder="Search"
+                               onfocus="this.value=''" onkeydown="searchEnter(this,event);"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="mainNavigation">
+<div class="container">
+<div class="row">
+<!--Site logo-->
+<div class="col-sm-2 col-xs-12">
+    <strong class="logo">
+        <a href="/">
+            <img src="${dotTheme.path}local/UTB/Global/Images/logo.png" alt="Equinix" class="img-responsive">
+            <img src="${dotTheme.path}local/UTB/Global/Images/eq_fortress_rights.png" alt="Equinix" class="img-responsive">
+        </a>
+        <span class="logoSubline">Where Opportunity Connects</span>
+    </strong>
+</div>
+
+<!--Main Navigation-->
+<div class="col-sm-10 col-xs-12">
+<nav class="navbar navbar-default" role="navigation">
+<div class="navbar-header">
+    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#nav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <!--  <span class= "glyphicon glyphicon-remove"></span>
+            <span><i class= "fa fa-bars"></i></span> -->
+    </button>
+</div>
+<div id="nav" class="collapse navbar-collapse">
+<ul id="navAccordion" class="navbar-nav nav panel-group">
+
+#set($sitenav = $navtool.getNav("/site"))
+#foreach($n in $sitenav)
+    <li class="panel">
+        <a class="nav${UtilMethods.capitalize($n.title)}" data-toggle="" data-target="#nav${UtilMethods.capitalize($n.title)}_Mobile" data-parent="#navAccordion" onclick=""
+           href="#">$n.title</a>
+
+        <ul id="nav${UtilMethods.capitalize($n.title)}_Mobile" class="navMobile panel-collapse collapse">
+            #foreach($child in $n.children)
+                <li><a href="$child.href">$child.title</a></li>
+            #end
+        </ul>
+    </li>
+#end
+</ul>
+</div>
+</nav>
+</div>
+
+<div class="col-xs-12 col-sm-2">
+    <div class="dropdown">
+        <div class="dropdown-toggle">
+            <span class="fa fa-user"></span>
+            <span class="downCaret"></span>
+        </div>
+    </div>
+    <div class="dropdown">
+        <div class="dropdown-toggle">
+            <span class="fa fa-globe"></span>
+            <span class="downCaret"></span>
+        </div>
+    </div>
+    <div class="dropdown">
+        <div class="dropdown-toggle">
+            <span class="fa fa-search"></span>
+            <span class="downCaret"></span>
+        </div>
+        <div class="dropdown-menu"></div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="menuContainer">
+
+<div class="menuContent container">
+
+#foreach($n in $sitenav)
+    <div class="nav${UtilMethods.capitalize($n.title)}">
+##        <div class="overview">
+##            <div class="overviewText">
+##                <a href="$n.href">$UtilMethods.capitalize($n.title)</a>
+##                <span class="caretNav">?</span>
+##            </div>
+##        </div>
+        <div class="holder">
+            <div class="column col4 col-sm-3">
+            #set($currentCol = 1)
+            #foreach($submenu in $n.children)
+                #if ($currentCol * 2 < $submenu.order)
+                    #set($currentCol = $currentCol + 1)
+                    </div>
+                    <div class="column col4 col-sm-3">
+                #end
+                    <a class="title parent" href="$submenu.href">$submenu.title</a>
+                    <span class="caretNav">?</span>
+                    <ul class="last">
+                        #foreach($subsubmenu in $submenu.children)
+                        <li>
+                            <a href="$subsubmenu.href">$subsubmenu.title</a>
+                        </li>
+                        #end
+                    </ul>
+            #end
+            </div>
+
+##            <!-- Interconnection & Connectivity -->
+##            <div class="column col4 col-sm-3">
+##                <a class="title parent" href="http://www.equinix.com/services/interconnection-connectivity/">Interconnection &amp;
+##                    Connectivity</a>
+##                <span class="caretNav">?</span>
+##                <ul class="last">
+##                    <li>
+##                        <a href="http://www.equinix.com/services/interconnection-connectivity/cloud-exchange/">Equinix Cloud
+##                            Exchange</a>
+##                    </li>
+##                    <li>
+##                        <a href="http://www.equinix.com/services/interconnection-connectivity/cross-connects/">Equinix Cross
+##                            Connects</a>
+##                    </li>
+##                    <li>
+##                        <a href="http://www.equinix.com/services/interconnection-connectivity/equinix-connect/">Equinix Connect</a>
+##                    </li>
+##                    <li>
+##                        <a href="http://www.equinix.com/services/interconnection-connectivity/global-roaming-exchange/">Global
+##                            Roaming Exchange</a>
+##                    </li>
+##                    <li>
+##                        <a href="http://www.equinix.com/services/interconnection-connectivity/internet-exchange/">Equinix Internet
+##                            Exchange</a>
+##                    </li>
+##                    <li>
+##                        <a href="http://www.equinix.com/services/interconnection-connectivity/management-access/">Management
+##                            Access</a>
+##                    </li>
+##                    <li class="last">
+##                        <a href="http://www.equinix.com/services/interconnection-connectivity/metro-connect/">Equinix Metro
+##                            Connect</a>
+##                    </li>
+##                </ul>
+##            </div>
+##            <!-- Data Centers & Colocation -->
+##            <div class="column col col-sm-3">
+##                <a class="title parent" href="http://www.equinix.com/services/data-centers-colocation/">Data Centers &amp;
+##                    Colocation</a>
+##                <span class="caretNav">?</span>
+##                <ul>
+##                    <li>
+##                        <a href="http://www.equinix.com/services/data-centers-colocation/colocation-support-space/">Colocation &amp;
+##                            Support Space</a>
+##                    </li>
+##                    <li>
+##                        <a href="http://www.equinix.com/services/data-centers-colocation/environment/">Data Center Environment</a>
+##                    </li>
+##                    <li>
+##                        <a href="http://www.equinix.com/services/data-centers-colocation/standards-compliance/">IBX Standards &amp;
+##                            Compliance</a>
+##                    </li>
+##                    <li class="last">
+##                        <a href="http://www.equinix.com/services/data-centers-colocation/infrastructure-services/">Infrastructure
+##                            Services</a>
+##                    </li>
+##                </ul>
+##                <!-- Moved Customer Support to 2/4 on 12.18.2015 for BR MS -->
+##                <a class="title parent" href="http://www.equinix.com/services/support/">Customer Support</a>
+##                <span class="caretNav">?</span>
+##                <ul class="last">
+##                    <li>
+##                        <a href="http://www.equinix.com/services/support/customer-portal/">Equinix Customer Portal</a>
+##                    </li>
+##                    <li class="last">
+##                        <a href="http://www.equinix.com/services/support/smart-hands/">Equinix Smart Hands</a>
+##                    </li>
+##                </ul>
+##            </div>
+##            <!-- Equinix Performance Hub & Data Hub -->
+##            <div class="column col4 col-sm-3">
+##                <a class="title parent" href="http://www.equinix.com/services/performance-hub/">Equinix Performance Hub</a>
+##                <span class="caretNav">?</span>
+##                <ul>
+##                    <li>
+##                        <a href="http://www.equinix.com/services/performance-hub/components/">Components</a>
+##                    </li>
+##                    <li>
+##                        <a href="http://www.equinix.com/services/performance-hub/use-cases/">Use Cases</a>
+##                    </li>
+##                    <li class="last">
+##                        <a href="http://www.equinix.com/services/performance-hub/design-deploy/">Design & Deployment</a>
+##                    </li>
+##                </ul>
+##                <a class="title parent" href="http://www.equinix.com/services/data-hub/">Equinix Data Hub</a>
+##                <span class="caretNav">?</span>
+##                <ul class="last">
+##                    <li class="last">
+##                        <a href="http://www.equinix.com/services/data-hub/use-cases/">Use Cases</a>
+##                    </li>
+##                </ul>
+##            </div>
+##            <!-- Professional Services & Marketplace -->
+##            <div class="column col4 col-sm-3 last">
+##                <!-- Begin UTMs for Default State & BR Managed Services inclusion -->
+##
+##
+##                <!--Loading the Config Asset (Metric-CFG_ASSET)-->
+##
+##
+##                <!--From Config Asset (Metric-CFG_ASSET) - getting Locales and AssetIds of Regions STARTS-->
+##
+##
+##                <!--From Config Asset (Metric-CFG_ASSET) - getting Locales and AssetIds of Regions ENDS-->
+##
+##
+##                <!--setting the content value to a fatwire variable -->
+##
+##
+##                <!-- Professional Services column - Default UTM --><a class="title parent"
+##                                                                      href="http://www.equinix.com/services/consulting/">Equinix
+##                Professional Services</a> <span class="caretNav">?</span>
+##                <ul>
+##                    <li><a href="http://www.equinix.com/services/consulting/cloud-consulting/">Cloud Consulting</a></li>
+##                    <li><a href="http://www.equinix.com/services/consulting/solution-validation-center/">Solution Validation
+##                        Centers</a></li>
+##                    <li class="last"><a href="http://www.equinix.com/services/consulting/global-solutions-architects/">Global
+##                        Solutions Architects</a></li>
+##                </ul>
+##                <a class="title parent" href="http://www.equinix.com/services/marketplace/">Equinix Marketplace</a> <span
+##                    class="caretNav">?</span>
+##                <ul class="last">
+##                    <li class="last"><a href="http://www.equinix.com/services/marketplace/">Overview</a></li>
+##                </ul>
+##                <!-- Professional Services column - Default UTM (@end) -->
+##
+##
+##                <!-- Begin UTMs for Default State & BR Managed Services inclusion (@end) -->
+##            </div>
+        </div>
+    </div>
+#end
+
+    </div>
+    <div class="exitMenu">
+        <a href="#" onclick="closeMenu(event)">close [x]</a>
+    </div>
+</div>

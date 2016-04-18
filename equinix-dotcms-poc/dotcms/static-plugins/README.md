@@ -1,0 +1,1 @@
+dotCMS Static Plugins

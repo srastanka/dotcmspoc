@@ -1,0 +1,302 @@
+div[id^="dynamic_map_comp"] {
+  position: relative;
+}
+div[id^="dynamic_map_comp"] * {
+  outline: none;
+}
+div[id^="dynamic_map_comp"] div[data-title] {
+  display: none;
+}
+div[id^="dynamic_map_comp"] div.row {
+  margin-top: 0;
+}
+div[id^="dynamic_map_comp"] .eq-map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  z-index: 99;
+}
+div[id^="dynamic_map_comp"] .eq-map-overlay .inner-overlay {
+  position: absolute;
+  top: 45px;
+  left: 45px;
+  right: 45px;
+  bottom: 45px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  white-space: nowrap;
+}
+div[id^="dynamic_map_comp"] .eq-map-overlay .inner-overlay .vertAlign {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+div[id^="dynamic_map_comp"] .eq-map-overlay .inner-overlay .overlayContent {
+  display: inline-block;
+  padding: 35px;
+  width: 100%;
+  font-family: "proxima_novaregular";
+  font-size: 48px;
+  text-align: center;
+  white-space: normal;
+  vertical-align: middle;
+}
+div[id^="dynamic_map_comp"] .eq-map-overlay .inner-overlay .overlayContent p {
+  color: white;
+}
+div[id^="dynamic_map_comp"] .eq-map-overlay .inner-overlay .overlayClose {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+  color: #999;
+  font-size: 21px;
+}
+div[id^="dynamic_map_comp"] .eq-map-overlay .inner-overlay .overlayClose:hover {
+  color: #bbb;
+}
+div[id^="dynamic_map_comp"] .eq-map-overlay .inner-overlay .overlayClose i:before {
+  position: relative;
+  top: 1px;
+  left: 4px;
+}
+
+/**
+ * Not nested for more flexible parent controls
+ */
+div[id^="controls"] {
+  /* float:     left; */
+  margin: 20px auto;
+  width: 100%;
+  display: none;
+  /************************
+     * GLOBAL UL/LI OVERRIDES --------------------------------------------------
+     ************************/
+  /* ---------------------------------------------------------------------- */
+}
+div[id^="controls"] .wrap_controls {
+  display: flex;
+}
+div[id^="controls"] .wrap_controls .upLevel {
+  width: 25%;
+  float: left;
+}
+div[id^="controls"] .wrap_controls .upLevel:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  /* margin-right:     -0.25em; Adjusts for spacing */
+}
+div[id^="controls"] .wrap_controls .upLevel p {
+  display: inline-block;
+  vertical-align: middle;
+}
+div[id^="controls"] .wrap_controls .upLevel + ul {
+  width: 73%;
+  padding-left: 2% !important;
+  border-left: 1px solid #d9d8d8;
+}
+div[id^="controls"] .wrap_controls ul {
+  float: left;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+div[id^="controls"] .wrap_controls ul li {
+  display: block;
+  float: left;
+  margin-right: 1%;
+  width: 24%;
+  list-style: none outside none;
+  color: #333;
+  font-family: "proxima_novaregular";
+  font-size: 16px;
+  line-height: 22px;
+}
+@media (max-width: 991px) {
+  div[id^="controls"] .wrap_controls ul li {
+    width: 48%;
+  }
+}
+div[id^="controls"] ul {
+  margin-top: 0;
+  margin-left: 0;
+}
+div[id^="controls"] ul li {
+  /*color:        inherit;*/
+  font-family: inherit;
+  font-size: 14px;
+  line-height: inherit;
+  margin-top: 0;
+}
+div[id^="controls"] ul li:before {
+  display: none !important;
+}
+
+/**
+ * Not nested for more flexible parent controls
+ */
+div[id^="gmap"] {
+  height: 300px;
+  margin: 0 auto;
+  border: 1px solid #d9d8d8;
+}
+.global div[id^="gmap"] {
+  height: 400px;
+}
+.regional div[id^="gmap"], .country div[id^="gmap"] {
+  height: 310px;
+}
+div[id^="gmap"] .eq_resetControl,
+div[id^="gmap"] .eq_allLocationsControl {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-top: 20px;
+  margin-left: 0px;
+}
+div[id^="gmap"] .eq_resetControl {
+  margin-left: 20px;
+  border-right: none;
+}
+div[id^="gmap"] h4 {
+  font-weight: bold;
+  margin: 5px 10px;
+  height: 25px;
+}
+div[id^="gmap"] .gm-style-iw {
+  /* width:      300px !important;
+  max-width:  300px !important; */
+  /*  text-align: center; */
+  /* @media(max-width: 479px)
+  {
+      width: 150px !important;
+  }
+  
+  [data-view="metro"] &,
+  [data-view="dataCenter"] &
+  {
+      max-width:  200px !important;
+      width:      150px !important;
+  } */
+}
+
+/*Added  as part of WCM-811*/
+
+div[id^="gmap"] .gm-style-iw p {
+	text-align: center;
+	line-height: 1;
+	padding-top: 5px;   	
+}
+div[id^="gmap"] .gm-style-iw p.text-left { text-align:left; }
+
+div[id^="gmap"] .gm-style-iw .customHeightWrapper { overflow:hidden; padding-bottom:10px; }
+[data-view="metro"] div[id^="gmap"] .gm-style-iw .customHeightWrapper, [data-view="dataCenter"] div[id^="gmap"] .gm-style-iw .customHeightWrapper {
+  max-width: 200px;
+  width: 150px;
+  height: 125px;
+}
+@media (max-width: 479px) {
+  div[id^="gmap"] .gm-style-iw .customHeightWrapper {
+    width: 150px;
+    height: 125px;
+  }
+}
+div[id^="gmap"] .gm-style-iw .customHeightWrapper > p:first-child {
+  margin:0 0 10px; 
+ font:16px "proxima_novabold"; 
+}
+
+div[id^="gmap"] .gm-style-iw .customHeightWrapper > p {
+	  font-size:13px; 
+	  margin-top:3px; 	
+}
+div[id^="gmap"] .gm-style-iw .customHeightWrapper > .service {
+  float: left;
+  margin-top: 5px;
+  width: 100%; 
+  max-height: 100px;
+}
+div[id^="gmap"] .gm-style-iw .service p {
+  text-align:left; color:#999;
+  }
+div[id^="gmap"] .gm-style-iw .customHeightWrapper > .service .serviceIcon {
+  float: left;
+  width: 20%;
+  padding-top: 2px;
+  padding-left: 5px;
+  text-align:center;
+}
+@media (max-width: 479px) {
+  div[id^="gmap"] .gm-style-iw .customHeightWrapper > .service .serviceIcon {
+    padding-left: 0;
+  }
+}
+
+div[id^="gmap"] .gm-style-iw .customHeightWrapper > .service .media {
+  margin-top:10px;
+}
+div[id^="gmap"] .gm-style-iw .customHeightWrapper > .service .media:first-child {
+  margin-top:0;
+}
+div[id^="gmap"] .gm-style-iw .customHeightWrapper > .service .media p { margin-top:0; }
+div[id^="gmap"] .gm-style-iw .customHeightWrapper > .service .serviceIcon img { 
+  display:inline-block;
+   }
+div[id^="gmap"] .gm-style-iw .customHeightWrapper > .service .serviceContent {
+  float: left;
+  width: 100%;
+  padding-top: 2px;
+  padding-left: 3px;
+  text-align: left;
+}
+div[id^="gmap"] .gm-style-iw .customHeightWrapper > .service .serviceIcon + .serviceContent { width:80%; }
+div[id^="gmap"] .gm-style-iw .customHeightWrapper > .service .serviceContent * {
+  font-family: "proxima_novaregular";
+  font-size: 12px;
+  line-height: 1;
+}
+div[id^="gmap"] .gm-style-iw .customHeightWrapper > .service .serviceContent h4 {
+  font-family: "proxima_novaregular";
+  font-weight: normal;
+  height: auto;
+  margin: auto;
+  text-transform: uppercase;
+}
+div[id^="gmap"] .location-tooltip {
+  font-size: 11px;
+  color: white;
+  text-shadow: 0 0 2px black;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: black;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#000));
+  font: Arial, sans-serif;
+  box-shadow: 0 0 3px 0px black;
+  padding: 4px;
+  border-radius: 3px;
+}
+div[id^="gmap"] .on_gmap.gmap_controls {
+  top: 0 !important;
+}
+div[id^="gmap"] .ullist.controls li {
+  margin: 0;
+}
+div[id^="gmap"] .ullist.controls li a {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+div.serviceIcon > a:hover {
+	text-decoration: none;
+ }
+
+ 
+/*Added by FWTEAM INDIA given by PHILL*/ 
+.eq-map-overlay .overlayContent a {color:#fff; text-decoration:underline;}
+.eq-map-overlay .overlayContent a:hover {#ff0000;}
+/*Added by FWTEAM INDIA given by PHILL*/ 

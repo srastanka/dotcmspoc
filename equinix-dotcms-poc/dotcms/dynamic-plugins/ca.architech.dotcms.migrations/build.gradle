@@ -1,0 +1,16 @@
+version = '0.1'
+
+jar {
+    manifest {
+        name = 'migrations'
+        instruction 'Bundle-Vendor', 'dotcms'
+        instruction 'Bundle-Description', 'migrations plugin for dotCMS'
+        instruction 'Bundle-DocURL', 'http://www.dotcms.com'
+        instruction 'Bundle-Activator', 'com.dotmarketing.osgi.external.Activator'
+        instruction 'DynamicImport-Package', '*'
+    }
+}
+
+dependencies {
+    testCompile libs.junit
+}

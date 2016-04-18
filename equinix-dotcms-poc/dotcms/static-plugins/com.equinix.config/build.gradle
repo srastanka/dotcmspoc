@@ -1,0 +1,2 @@
+ext.artifactId = "equinix-com_equinix_config"
+ext.archive = "${ext.artifactId}-${project.version}.tar"

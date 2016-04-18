@@ -1,0 +1,16 @@
+/* Comp: Text DCM 
+ * Edited: 09/09/15 by Phillip Pang
+ */
+.text_dcm_wrapper, .text_dcm {
+  background-color: #e7e7e7;
+  padding: 20px;
+}
+.text_dcm > h2:first-child { margin:10px 0; }
+.text_dcm > h2 + .row { margin-top:30px; }
+.text_dcm_wrapper > h3:first-child, .text_dcm > h3:first-child { margin-top:10px; }
+.text_dcm_wrapper p, .text_dcm p { padding: 0 0 20px; }
+.text_dcm_wrapper p:last-child, .text_dcm p:last-child { padding-bottom:0; }
+.text_dcm_wrapper p + hr, .text_dcm p + hr, .text_dcm_wrapper p + p, .text_dcm p + p { margin-top:0; }
+
+.text_dcm p > span[class*="EQ-"], .text_dcm p > span[class^="EQ-"] { vertical-align:bottom; }
+.text_dcm span[class*="EQ-"] + a, .text_dcm span[class^="EQ-"] + a { display:inline-block; padding-left:7px; }

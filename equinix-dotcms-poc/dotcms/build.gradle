@@ -1,0 +1,69 @@
+import java.nio.file.Paths
+import org.yaml.snakeyaml.Yaml
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.yaml:snakeyaml:1.16'
+        classpath 'org.hidetake:gradle-ssh-plugin:1.1.4'
+    }
+}
+
+ext {
+    jUnitVersion = "4.12"
+    springVersion = "3.2.15.RELEASE"
+
+    servletApiVersion = "2.5"
+    jspApiVersion = "2.1"
+    jstlVersion = "1.2"
+    elApiVersion = "2.2"
+
+    jacksonVersion = "2.2.0"
+
+    slf4jVersion = "1.7.5"
+    logbackVersion = "1.0.13"
+
+    libs = [
+            spring_core: "org.springframework:spring-core:$springVersion",
+            spring_web: "org.springframework:spring-web:$springVersion",
+            spring_webmvc: "org.springframework:spring-webmvc:$springVersion",
+            spring_test: "org.springframework:spring-test:$springVersion",
+
+            junit: "junit:junit:$jUnitVersion",
+
+            servlet_api: "javax.servlet:servlet-api:$servletApiVersion",
+            jsp_api: "javax.servlet.jsp:jsp-api:$jspApiVersion",
+            jstl: "javax.servlet:jstl:$jstlVersion",
+            el_api: "javax.el:el-api:$elApiVersion",
+
+            jackson_core: "com.fasterxml.jackson.core:jackson-core:$jacksonVersion",
+            jackson_databind: "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
+            jackson_annotations: "com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion",
+
+            slf4j_api: "org.slf4j:slf4j-api:$slf4jVersion",
+            jcl_over_slf4j: "org.slf4j:jcl-over-slf4j:$slf4jVersion",
+            logback_classic: "ch.qos.logback:logback-classic:$logbackVersion"
+    ]
+}
+
+def readEnvConfig() {
+    def settings = new Yaml().load(project.hasProperty('settingsfile') ? new File(settingsfile).text : new File(rootDir, "dotcms/config/settings.yml").text)
+    def envOpt = hasProperty('env') ? env : 'dev'
+
+    settings.env[envOpt]
+}
+
+def getTargetHostConfig(envConfig) {
+    def ssh_key = new File(envConfig.ssh.key);
+    [
+            identity: ssh_key.exists() ?
+                    ssh_key :
+                    rootDir.toPath().resolve(Paths.get("dotcms/config", envConfig.ssh.key)).toFile(),
+            host    : envConfig.host,
+            user    : envConfig.ssh.user
+    ]
+}
+

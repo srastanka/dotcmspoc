@@ -1,0 +1,8 @@
+.modal > .modal-dialog > .modal-content { border-radius: 0px; }
+.modal > .modal-dialog > .modal-content > .modal-header { background-color: #666; }
+.modal > .modal-dialog > .modal-content > .modal-header > h3,
+.modal > .modal-dialog > .modal-content > .modal-header > button > i,
+.modal .modal-title a { color: #fff; }
+.modal > .modal-dialog > .modal-content > .modal-body > section > h2 { color: #ff0000; }
+.modal > .modal-dialog > .modal-content > .modal-body > section iframe { width: 100% !important; }
+.modal .modal-title a > .fa-chevron-right { display:none; }
