@@ -5,7 +5,7 @@ sites:
 #    theme: bootstrap2
 env:
   dev:
-    host: dotcms-dev
+    host: localhost
     dotCMSHome: /opt/dotcms
     webdav:
       port: 8080
@@ -16,3 +16,17 @@ env:
     ssh:
       user: dotcms
       key: ssh_key
+
+  devint:
+    host: ch3lxcmbasd02
+    dotCMSHome: /opt/dotcms
+    webdav:
+      port: 8080
+      user: admin@dotcms.com
+      password: admin
+      protocol: http
+      webdavRootPath: /webdav/autopub/
+    ssh:
+      user: dotcms
+      key: ssh_key
+      
